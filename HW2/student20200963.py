@@ -45,7 +45,7 @@ while i < all:
 	count = 0
 	for row in ws:
 		if total[i] == ws.cell(row_id, column = 7).value:
-			ws.cell(row_id, column = 8).value = 'C'
+			ws.cell(row_id, column = 8).value = 'C0'
 			grade.append('C0')
 			count += 1
 		row_id += 1
