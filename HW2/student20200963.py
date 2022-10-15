@@ -23,7 +23,7 @@ num = all * 0.3
 g = 'A0'
 i = 0
 while i < all:
-	if int(num - total.count(total[i])) >= 0:
+	if num - total.count(total[i]) >= 0:
 		row_id = 2
 		count = 0
 		for row in ws:
@@ -55,7 +55,7 @@ num = grade.count('A0') * 0.5
 g = 'A+'
 i = 0
 while i < all:
-	if int(num - total.count(total[i])) >= 0:
+	if num - total.count(total[i]) >= 0:
 		row_id = 2
 		count = 0
 		for row in ws:
@@ -66,11 +66,11 @@ while i < all:
 			row_id += 1
 		i += count
 	elif g == 'A+':
-		i += grade.count('A0')
+		i = grade.count('A0')
 		num = grade.count('B0') * 0.5
 		g = 'B+'
 	elif g == 'B+':
-		i += grade.count('B0')
+		i = grade.count('A0') + grade.count('B0')
 		num = grade.count('C0') * 0.5
 		g = 'C+'
 	else:
