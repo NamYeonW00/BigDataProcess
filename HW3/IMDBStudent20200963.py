@@ -11,7 +11,7 @@ with open(file, "rt") as fp:
 		str_arr = line.split("::")
 		genre_arr = str_arr[2].split("|")
 		for g in genre_arr:
-			if g not in d:
+			if g.strip() not in d:
 				d[g.strip()] = 1
 			else:
 				d[g.strip()] += 1
