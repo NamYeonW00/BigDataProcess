@@ -21,11 +21,12 @@ with open(file, "rt") as fp:
 			temp = d[rd].split(",")
 			v = int(temp[0]) + int(str_arr[2])
 			t = int(temp[1]) + int(str_arr[3])
+			d[rd] = str(v) + "," + str(t)
 
 fp.close()
 
 file = sys.argv[2]
 with open(file, "wt") as fp:
 	for k, v in d.items():
-		data = "%s %s" % (k, v)
+		data = "%s %s\n" % (k, v)
 		fp.write(data)
