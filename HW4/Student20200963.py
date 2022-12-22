@@ -21,7 +21,7 @@ def classify0(inX, dataSet, labels, k):
 def fileToMatrix(foldername):
 	fileList = listdir(foldername)
 	numberOfFiles = len(fileList)
-	returnMat = np.zeros((numberOfFiles, 1025))
+	returnMat = np.zeros((numberOfFiles, 1024))
 	classLabelVector = []
 	for i in range(numberOfFiles):
 		f = open(foldername + '/' + fileList[i])
@@ -38,7 +38,6 @@ testDigits = sys.argv[2]
 
 trainingMatrix, trainingLabels = fileToMatrix(trainingDigits)
 
-all = 0
 error = 0
 
 testList = listdir(testDigits)
